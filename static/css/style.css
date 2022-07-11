@@ -2,10 +2,6 @@
     color: red;
 }
 
-ul.errorlist {
-    display: none;
-}
-
 a.note:link {
     text-decoration: none;
     color: unset;

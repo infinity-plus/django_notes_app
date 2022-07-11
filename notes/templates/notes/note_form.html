@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% block body %}
+<style>
+    ul.errorlist {
+        display: none;
+    }
+</style>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
