@@ -5,3 +5,28 @@
 ul.errorlist {
     display: none;
 }
+
+a.note:link {
+    text-decoration: none;
+    color: unset;
+    background-color: unset !important;
+}
+
+a.note:visited {
+    text-decoration: none;
+    color: unset;
+    background-color: unset !important;
+}
+
+a.note:hover {
+    text-decoration: underline;
+    color: unset;
+    background-color: unset !important;
+}
+
+a.note:active {
+    text-decoration: underline;
+    color: unset;
+    background-color: unset !important;
+
+}
