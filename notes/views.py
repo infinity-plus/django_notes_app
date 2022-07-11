@@ -1,8 +1,21 @@
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
+
+from .forms import NoteForm
 
 
 from .models import Note
+
+
+class NoteCreateView(LoginRequiredMixin, CreateView):
+    model = Note
+    form_class = NoteForm
+    success_url = "/notes/"
+    template_name: str = "notes/note_new.html"
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 class NoteListView(LoginRequiredMixin, ListView):
