@@ -1,4 +1,6 @@
 {% extends "base.html" %} {% block body %}
+<title>{{ note.title }}</title>
+
 <div class="border">
     <h3 class="my-5">{{note.title}}</h3>
     <p>{{note.created_at}}</p>
