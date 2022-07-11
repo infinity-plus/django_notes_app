@@ -1,0 +1,7 @@
+{% extends "base.html" %} {% block body %}
+<div class="border">
+    <h3 class="my-5">{{note.title}}</h3>
+    <p>{{note.created_at}}</p>
+    <p>{{note.content}}</p>
+</div>
+{% endblock %}
